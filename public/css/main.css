@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    color: #111;
+    margin: 0;
+    font: 1rem/1.5 'Roboto', sans-serif;
+
+    /* remove after including bootstrap */
+    padding: 30px; 
+}
