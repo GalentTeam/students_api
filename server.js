@@ -88,7 +88,7 @@ app.post('/send/test/:one?/:two?', (req, res) => {
 });
 // 404
 app.all('*', (req, res) => {
-    res.status(404).send('404 not found');
+    res.status(404).send('404 not found.');
 });
 
 
