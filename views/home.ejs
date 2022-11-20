@@ -7,13 +7,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main.css?v=2.0">
         <title><?= title ?></title>
     </head>
     <body>
         <h1><?= title ?></h1>
         <p>Make requests and get response.</p>
-        <h2>Periodic Table</h2>
+
+        <h2>1) Periodic Table</h2>
         <h3>Request</h3>
         <ul>
             <li>Method: GET</li>
@@ -21,5 +22,24 @@
         </ul>
         <h3>Response</h3>
         <p>JSON: array, where each element is an object.</p>
+
+        <hr>
+
+        <h2>2) Send test data</h2>
+        <h3>Request</h3>
+        <ul>
+            <li>Method: POST</li>
+            <li>Content-Type: application/json, application/x-www-form-urlencoded</li>
+            <li>URL: <code><a href="/send/test" target="_blank">https://api.weber.am/send/test</a></code></li>
+            <li>
+                Optional
+                <ul>
+                    <li>Params: one, two</li>
+                    <li>Query: unlimited</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Response</h3>
+        <p>JSON: object, where each key-value pair is what you've sent.</p>
     </body>
 </html>

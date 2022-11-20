@@ -57,10 +57,34 @@ app.get('/', (req, res) => {
     });
 });
 // API
+// get periodic table
 app.get('/get/periodicTable', (req, res) => {
     const json = fs.readFileSync('./public/files/api/PeriodicTableJSON.json');
     const Periodic = JSON.parse(json).elements;
     res.status(200).json(Periodic);
+});
+// post test data
+app.post('/send/test/:one?/:two?', (req, res) => {
+    // error
+    let result = {
+        status: 'error',
+        message: 'Missing posted data. Content-Type must be "application/json" or "application/x-www-form-urlencoded".'
+    };
+    // check data
+    if (Object.keys(req.body).length) {
+        // success
+        result = {
+            status: 'success',
+            message: 'Good job!',
+            data: {
+                body: req.body,
+                params: req.params,
+                query: req.query
+            }
+        }
+    }
+    // result
+    res.status(200).json(result);
 });
 // 404
 app.all('*', (req, res) => {
