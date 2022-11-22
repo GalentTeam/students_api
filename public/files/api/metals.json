@@ -1,0 +1,166 @@
+[
+    {
+        "number": 1,
+        "symbol": "Au",
+        "name": {
+            "hy": "Ոսկի",
+            "en": "Gold"
+        },
+        "letter": {
+            "lowercase": "ա",
+            "uppercase": "Ա"
+        },
+        "planet": {
+            "hy": "Արև",
+            "en": "Sun"
+        },
+        "weekDay": {
+            "hy": "Կիրակի",
+            "en": "Sunday"
+        }
+    },
+    {
+        "number": 2,
+        "symbol": "Ag",
+        "name": {
+            "hy": "Արծ",
+            "en": "Silver",
+            "alt": "Արծաթ"
+        },
+        "letter": {
+            "lowercase": "ի",
+            "uppercase": "Ի"
+        },
+        "planet": {
+            "hy": "Լուսին",
+            "en": "Moon"
+        },
+        "weekDay": {
+            "hy": "Երկուշաբթի",
+            "en": "Monday"
+        }
+    },
+    {
+        "number": 3,
+        "symbol": "Fe",
+        "name": {
+            "hy": "Անգ",
+            "en": "Iron",
+            "alt": "Երկաթ"
+        },
+        "letter": {
+            "lowercase": "ե",
+            "uppercase": "Ե"
+        },
+        "planet": {
+            "hy": "Հրատ",
+            "en": "Mars",
+            "alt": "Մարս"
+        },
+        "weekDay": {
+            "hy": "Երեքշաբթի",
+            "en": "Tuesday"
+        }
+    },
+    {
+        "number": 4,
+        "symbol": "Hg",
+        "name": {
+            "hy": "Կենդանի",
+            "en": "Mercury",
+            "alt": "սնդիկ"
+        },
+        "letter": {
+            "lowercase": "ո",
+            "uppercase": "Ո"
+        },
+        "planet": {
+            "hy": "Փայլածու",
+            "en": "Mercury",
+            "alt": "Մերկուրի"
+        },
+        "weekDay": {
+            "hy": "Չորեքշաբթի",
+            "en": "Wednesday"
+        }
+    },
+    {
+        "number": 5,
+        "symbol": "Sn",
+        "name": {
+            "hy": "Կալայ",
+            "en": "Tin",
+            "alt": "Անագ"
+        },
+        "letter": {
+            "lowercase": "է",
+            "uppercase": "Է"
+        },
+        "planet": {
+            "hy": "Լուսնթագ",
+            "en": "Jupiter",
+            "alt": "Յուպիտեր"
+        },
+        "weekDay": {
+            "hy": "Հինգշաբթի",
+            "en": "Thursday"
+        }
+    },
+    {
+        "number": 6,
+        "symbol": "Cu",
+        "name": {
+            "hy": "Խալգ",
+            "en": "Copper",
+            "alt": "Պղինձ"
+        },
+        "letter": {
+            "lowercase": "ւ",
+            "uppercase": "Ւ"
+        },
+        "letterAlt": {
+            "lowercase": "ու",
+            "uppercase": "ՈՒ"
+        },
+        "planet": {
+            "hy": "Արուսյակ",
+            "en": "Venus",
+            "alt": "Վեներա"
+        },
+        "weekDay": {
+            "hy": "ՈՒրբաթ",
+            "en": "Friday"
+        }
+    },
+    {
+        "number": 7,
+        "symbol": "Pb",
+        "name": {
+            "hy": "Արճիճ",
+            "en": "Lead",
+            "alt": "կապար"
+        },
+        "letter": {
+            "lowercase": "ը",
+            "uppercase": "Ը"
+        },
+        "planet": {
+            "hy": "Երևակ",
+            "en": "Saturn",
+            "alt": "Սատուրն"
+        },
+        "weekDay": {
+            "hy": "Շաբաթ",
+            "en": "Saturday"
+        }
+    },
+    {
+        "number": 8,
+        "symbol": "Mo",
+        "name": {
+            "hy": "Կապ",
+            "en": "Molybdenum",
+            "alt": "Կապարարծաթ, Մոլիբդեն"
+        }
+    }
+]

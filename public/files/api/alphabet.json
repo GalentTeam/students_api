@@ -1,0 +1,254 @@
+[
+    {
+        "uppercase": "Ա",
+        "lowercase": "ա",
+        "vowel": true,
+        "digit": 1,
+        "number": 1
+    },
+    {
+        "uppercase": "Բ",
+        "lowercase": "բ",
+        "vowel": false,
+        "digit": 2,
+        "number": 2
+    },
+    {
+        "uppercase": "Գ",
+        "lowercase": "գ",
+        "vowel": false,
+        "digit": 3,
+        "number": 3
+    },
+    {
+        "uppercase": "Դ",
+        "lowercase": "դ",
+        "vowel": false,
+        "digit": 4,
+        "number": 4
+    },
+    {
+        "uppercase": "Ե",
+        "lowercase": "ե",
+        "vowel": true,
+        "digit": 5,
+        "number": 5
+    },
+    {
+        "uppercase": "Զ",
+        "lowercase": "զ",
+        "vowel": false,
+        "digit": 6,
+        "number": 6
+    },
+    {
+        "uppercase": "Է",
+        "lowercase": "է",
+        "vowel": true,
+        "digit": 7,
+        "number": 7
+    },
+    {
+        "uppercase": "Ը",
+        "lowercase": "ը",
+        "vowel": true,
+        "digit": 8,
+        "number": 8
+    },
+    {
+        "uppercase": "Թ",
+        "lowercase": "թ",
+        "vowel": false,
+        "digit": 9,
+        "number": 9
+    },
+    {
+        "uppercase": "Ժ",
+        "lowercase": "ժ",
+        "vowel": false,
+        "digit": 10,
+        "number": 10
+    },
+    {
+        "uppercase": "Ի",
+        "lowercase": "ի",
+        "vowel": true,
+        "digit": 20,
+        "number": 11
+    },
+    {
+        "uppercase": "Լ",
+        "lowercase": "լ",
+        "vowel": false,
+        "digit": 30,
+        "number": 12
+    },
+    {
+        "uppercase": "Խ",
+        "lowercase": "խ",
+        "vowel": false,
+        "digit": 40,
+        "number": 13
+    },
+    {
+        "uppercase": "Ծ",
+        "lowercase": "ծ",
+        "vowel": false,
+        "digit": 50,
+        "number": 14
+    },
+    {
+        "uppercase": "Կ",
+        "lowercase": "կ",
+        "vowel": false,
+        "digit": 60,
+        "number": 15
+    },
+    {
+        "uppercase": "Հ",
+        "lowercase": "հ",
+        "vowel": false,
+        "digit": 70,
+        "number": 16
+    },
+    {
+        "uppercase": "Ձ",
+        "lowercase": "ձ",
+        "vowel": false,
+        "digit": 80,
+        "number": 17
+    },
+    {
+        "uppercase": "Ղ",
+        "lowercase": "ղ",
+        "vowel": false,
+        "digit": 90,
+        "number": 18
+    },
+    {
+        "uppercase": "Ճ",
+        "lowercase": "ճ",
+        "vowel": false,
+        "digit": 100,
+        "number": 19
+    },
+    {
+        "uppercase": "Մ",
+        "lowercase": "մ",
+        "vowel": false,
+        "digit": 200,
+        "number": 20
+    },
+    {
+        "uppercase": "Յ",
+        "lowercase": "յ",
+        "vowel": false,
+        "digit": 300,
+        "number": 21
+    },
+    {
+        "uppercase": "Ն",
+        "lowercase": "ն",
+        "vowel": false,
+        "digit": 400,
+        "number": 22
+    },
+    {
+        "uppercase": "Շ",
+        "lowercase": "շ",
+        "vowel": false,
+        "digit": 500,
+        "number": 23
+    },
+    {
+        "uppercase": "Ո",
+        "lowercase": "ո",
+        "vowel": true,
+        "digit": 600,
+        "number": 24
+    },
+    {
+        "uppercase": "Չ",
+        "lowercase": "չ",
+        "vowel": false,
+        "digit": 700,
+        "number": 25
+    },
+    {
+        "uppercase": "Պ",
+        "lowercase": "պ",
+        "vowel": false,
+        "digit": 800,
+        "number": 26
+    },
+    {
+        "uppercase": "Ջ",
+        "lowercase": "ջ",
+        "vowel": false,
+        "digit": 900,
+        "number": 27
+    },
+    {
+        "uppercase": "Ռ",
+        "lowercase": "ռ",
+        "vowel": false,
+        "digit": 1000,
+        "number": 28
+    },
+    {
+        "uppercase": "Ս",
+        "lowercase": "ս",
+        "vowel": false,
+        "digit": 2000,
+        "number": 29
+    },
+    {
+        "uppercase": "Վ",
+        "lowercase": "վ",
+        "vowel": false,
+        "digit": 3000,
+        "number": 30
+    },
+    {
+        "uppercase": "Տ",
+        "lowercase": "տ",
+        "vowel": false,
+        "digit": 4000,
+        "number": 31
+    },
+    {
+        "uppercase": "Ր",
+        "lowercase": "ր",
+        "vowel": false,
+        "digit": 5000,
+        "number": 32
+    },
+    {
+        "uppercase": "Ց",
+        "lowercase": "ց",
+        "vowel": false,
+        "digit": 6000,
+        "number": 33
+    },
+    {
+        "uppercase": "Ւ",
+        "lowercase": "ւ",
+        "vowel": true,
+        "digit": 7000,
+        "number": 34
+    },
+    {
+        "uppercase": "Փ",
+        "lowercase": "փ",
+        "vowel": false,
+        "digit": 8000,
+        "number": 35
+    },
+    {
+        "uppercase": "Ք",
+        "lowercase": "ք",
+        "vowel": false,
+        "digit": 9000,
+        "number": 36
+    }
+]

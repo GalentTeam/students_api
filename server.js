@@ -56,13 +56,27 @@ app.get('/', (req, res) => {
         title: 'API for students'
     });
 });
+
 // API
+// get alphabet
+app.get('/get/alphabet', (req, res) => {
+    const alphabetJson = fs.readFileSync('./public/files/api/alphabet.json');
+    const alphabet = JSON.parse(alphabetJson);
+    res.status(200).json(alphabet);
+});
+// get metals
+app.get('/get/metals', (req, res) => {
+    const metalsJson = fs.readFileSync('./public/files/api/metals.json');
+    const metals = JSON.parse(metalsJson);
+    res.status(200).json(metals);
+});
 // get periodic table
 app.get('/get/periodicTable', (req, res) => {
-    const json = fs.readFileSync('./public/files/api/PeriodicTableJSON.json');
-    const Periodic = JSON.parse(json).elements;
-    res.status(200).json(Periodic);
+    const periodicJson = fs.readFileSync('./public/files/api/PeriodicTableJSON.json');
+    const periodic = JSON.parse(periodicJson).elements;
+    res.status(200).json(periodic);
 });
+
 // post test data
 app.post('/send/test/:one?/:two?', (req, res) => {
     // error
@@ -86,6 +100,7 @@ app.post('/send/test/:one?/:two?', (req, res) => {
     // result
     res.status(200).json(result);
 });
+
 // 404
 app.all('*', (req, res) => {
     res.status(404).send('404 not found');
