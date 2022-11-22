@@ -250,5 +250,26 @@
         "vowel": false,
         "digit": 9000,
         "number": 36
+    },
+    {
+        "uppercase": "Եվ",
+        "lowercase": "և",
+        "vowel": false,
+        "digit": 10000,
+        "number": 37
+    },
+    {
+        "uppercase": "Օ",
+        "lowercase": "օ",
+        "vowel": true,
+        "digit": 20000,
+        "number": 38
+    },
+    {
+        "uppercase": "Ֆ",
+        "lowercase": "ֆ",
+        "vowel": false,
+        "digit": 30000,
+        "number": 39
     }
 ]
