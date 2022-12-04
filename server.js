@@ -5,6 +5,7 @@ const express = require('express');
 const ejs = require('ejs');
 const cookieParser = require('cookie-parser');
 const rateLimit = require('express-rate-limit');
+const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const os = require('os');
 const morgan = require('morgan');
@@ -29,6 +30,7 @@ ejs.delimiter = '?';
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+app.use(fileUpload());
 app.use(cookieParser());
 app.use(cors());
 // Dev
@@ -36,11 +38,11 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 // Limit requests from same IP
-app.use('/', rateLimit({
-    max: 300,
-    windowMs: 60 * 60 * 1000,
-    message: 'Too many requests from this IP, please try again in an hour!'
-}));
+// app.use('/', rateLimit({
+//     max: 1000,
+//     windowMs: 60 * 60 * 1000,
+//     message: 'Too many requests from this IP, please try again in an hour!'
+// }));
 // Main middleware
 app.use(async (req, res, next) => {
     req.time = Date.now();
@@ -94,6 +96,39 @@ app.post('/send/test/:one?/:two?', (req, res) => {
                 body: req.body,
                 params: req.params,
                 query: req.query
+            }
+        }
+    }
+    // result
+    res.status(200).json(result);
+});
+
+// post file
+app.post('/send/formdata', (req, res) => {
+    // error
+    let result = {
+        status: 'error',
+        message: 'Missing posted data. Content-Type must be "application/json" or "application/x-www-form-urlencoded".'
+    };
+    // check data
+    if (Object.keys(req.body).length) {
+        // success
+        result = {
+            status: 'success',
+            message: 'Good job!',
+            data: {
+                body: req.body,
+                params: req.params,
+                query: req.query,
+                files: {}
+            },
+        }
+        // check files
+        if (req.files) {
+            // get file
+            for (let key in req.files) {
+                let { name, size, mimetype } = req.files[key];
+                result.data.files[key] = { name, size, mimetype };
             }
         }
     }
