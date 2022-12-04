@@ -1,33 +1,41 @@
 // 1) Moduls
-const path = require('path');
-const fs = require('fs');
-const express = require('express');
-const ejs = require('ejs');
-const cookieParser = require('cookie-parser');
-const rateLimit = require('express-rate-limit');
-const fileUpload = require('express-fileupload');
-const cors = require('cors');
-const os = require('os');
-const morgan = require('morgan');
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
+import 'dotenv/config';
+
+import path from 'path';
+import fs from 'fs';
+import express from 'express';
+import ejs from 'ejs';
+import fileUpload from 'express-fileupload';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
+import rateLimit from 'express-rate-limit';
+import morgan from 'morgan';
 
 // dotenv
-dotenv.config({ path: './.env' });
+dotenv.config({
+    silent: process.env.NODE_ENV === 'production',
+    path: '.env'
+});
 
-// express
+
+
+// 2) Express settings
 const app = express();
+if (process.env.NODE_ENV === 'production')
+app.set('trust proxy', 1);
 
 
 
-// 2) View engine
+// 3) View engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', 'views');
 ejs.delimiter = '?';
 
 
 
-// 3) Middlewares
-app.use(express.static(path.join(__dirname, 'public')));
+// 4) Middlewares
+app.use(express.static('public'));
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(fileUpload());
@@ -38,11 +46,13 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
 // Limit requests from same IP
-// app.use('/', rateLimit({
-//     max: 1000,
-//     windowMs: 60 * 60 * 1000,
-//     message: 'Too many requests from this IP, please try again in an hour!'
-// }));
+app.use('/', rateLimit({
+    max: 1000,
+    windowMs: 60 * 60 * 1000,
+    message: 'Too many requests from this IP, please try again in an hour!',
+    standardHeaders: true,
+	legacyHeaders: false,
+}));
 // Main middleware
 app.use(async (req, res, next) => {
     req.time = Date.now();
@@ -51,7 +61,7 @@ app.use(async (req, res, next) => {
 
 
 
-// 3) Routes
+// 5) Routes
 // Home
 app.get('/', (req, res) => {
     res.render('home', {
