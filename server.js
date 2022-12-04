@@ -1,8 +1,7 @@
-// 1) Moduls
+// 1) Modules
 import dotenv from 'dotenv';
 import 'dotenv/config';
 
-import path from 'path';
 import fs from 'fs';
 import express from 'express';
 import ejs from 'ejs';
@@ -24,17 +23,14 @@ dotenv.config({
 const app = express();
 if (process.env.NODE_ENV === 'production')
 app.set('trust proxy', 1);
-
-
-
-// 3) View engine
+// view engine
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 ejs.delimiter = '?';
 
 
 
-// 4) Middlewares
+// 3) Middlewares
 app.use(express.static('public'));
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
@@ -61,7 +57,7 @@ app.use(async (req, res, next) => {
 
 
 
-// 5) Routes
+// 4) Routes
 // Home
 app.get('/', (req, res) => {
     res.render('home', {
@@ -153,6 +149,6 @@ app.all('*', (req, res) => {
 
 
 
-// 4) Start server
+// 5) Start server
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => console.log(`App running on port ${port}...`));
