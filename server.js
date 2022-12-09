@@ -110,11 +110,11 @@ app.post('/send/test/:one?/:two?', (req, res) => {
 });
 
 // post file
-app.post('/send/formdata', (req, res) => {
+app.post('/send/formdata/:one?/:two?', (req, res) => {
     // error
     let result = {
         status: 'error',
-        message: 'Missing posted data. Content-Type must be "application/json" or "application/x-www-form-urlencoded".'
+        message: 'Missing posted data.'
     };
     // check data
     if (Object.keys(req.body).length) {
